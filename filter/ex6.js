@@ -28,11 +28,11 @@ Sortie attendue:
 
 function filterOffensiveComments(comments, bannedWords) {
   return comments.filter(function(x){
-    if((x.toLowerCase().includes(bannedWords.toLowerCase())) === false){
+    if ((x.toLowerCase().includes(bannedWords[0]) || x.toLowerCase().includes(bannedWords[1])) === false){
       return x;
     }
   })
-}
+} 
 
 // Ne pas modifier l'export
 module.exports = filterOffensiveComments;
